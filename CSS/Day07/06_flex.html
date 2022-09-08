@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>弹性布局</title>
+		<style>
+			.box {
+				width: 1000px;
+				height: 300px;
+				background-color: pink;
+				margin: 50px auto;
+				/* 开启弹性布局 */
+				display: flex;
+				/* 主轴排序方式
+				 横向，正向排序*/
+				flex-direction: row;
+				/* 横向，反向排序 */
+				flex-direction: row-reverse;
+				/* 列模式（竖向），正向排列 */
+				flex-direction: column;
+				flex-direction: column-reverse;
+			}
+			.box div {
+				width: 280px;
+				height: 300px;
+			}
+			.box div:nth-child(1) {
+				background-color: orange;
+			}
+			.box div:nth-child(2) {
+				background-color: red;
+			}
+			.box div:nth-child(3) {
+				background-color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+		</div>
+	</body>
+</html>

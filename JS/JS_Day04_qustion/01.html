@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 有1、2、3、4个数字，
+		能组成多少个互不相同且无重复数字的三位数？都是多少？ -->
+	</head>
+	<body>
+		<script>
+			// JS中数组的定义方法
+			let array=[1,2,3,4];
+			
+			var count=0;
+			for (i=0;i<array.length;i++) {
+				for (j=0;j<array.length;j++) {
+					for (k=0;k<array.length;k++) {
+						if (i!==j && i!==k && j!==k) {
+						console.log(''+array[i]+array[j]+array[k]+'')	
+						count++;
+						}
+					}
+				}
+			}
+			console.log('一共'+count+'个')
+		</script>
+	</body>
+</html>

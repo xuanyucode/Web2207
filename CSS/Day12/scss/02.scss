@@ -1,0 +1,43 @@
+// 变量，提前保存将来多次使用的值
+$red:#f40;
+// 练习：使用变量保存宽度值和高度值，在css调用这两个变量
+$w:300px;
+$h:200px;
+// 练习：使用变量保存盒子阴影的值，在不同的盒子下调用 
+$shadow: 5px 7px 5px rgba(0,0,0,0.5);
+.box {
+	width: $w;
+	height: $h;
+	border: 1px solid $red;
+	box-shadow: $shadow;
+	// 占位，表示父选择器
+	&:hover {
+		background-color: $red;
+	}
+	&>span {
+		font-size: 20px;
+	}
+}
+h2 {
+	color: $red;
+}
+button {
+	background-color: $red;
+	width: $w;
+	height: $h;
+	box-shadow: $shadow;
+}
+// 将一组无序列表中的第一个和最后一个设置样式
+ul{
+	width: $w;
+	background-color: pink;
+	li{
+		list-style: none;
+		&:first-child {
+			background-color: red;
+		}
+		&:last-child {
+			background-color: orange;
+		}
+	}
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		//常量const：声明后必须赋值，不允许重新赋值
+		const b=3
+		console.log(b)
+		
+		// 声明两个变量，分别保存用户输入的用户名和密码；如果用户名是admin并且密码是123456，打印true，否则打印false
+		var username='admin'
+		var password='12000abc'
+		console.log(username=='admin' && password=='12000abc' ? '登录成功' :'登录失败')
+		
+		// 声明变量保存商品的价格，对商品的价格打8折，最后打印价格。
+		var price=100
+		price *=0.8
+		console.log(price)
+		
+		// 尝试在if语句中，如果条件表达式是一个值(数字、字符串、未定义、空)，什么情况下会转为true，什么情况会转为false
+		if (undefined) {
+			console.log(true)
+		}else console.log(false)
+		
+		</script>
+	</body>
+</html>

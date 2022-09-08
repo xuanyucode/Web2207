@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>完成控制段落文字大小效果</title>
+		<style>
+			p {
+				width: 400px;
+				background-color: pink;
+				font-size: 20px;
+			}
+			
+			#box1 {
+				width: 300px;
+				height: 400px;
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<p id="box">我是图图</p>	
+		<button id="btn1">变大</button>
+		<button id="btn2">变小</button>
+		
+		<div id="box1"></div>
+		<button id="btn3">red</button>
+		<button id="btn4">green</button>
+		<button id="btn5">blue</button>
+		
+		<script>
+			var a=20
+			btn1.onclick=function(){
+				// 变量a自动加10
+				a+=10
+				// 把a的值赋给p标签的font-size
+				box.style.fontSize=a+'px'
+			}
+			// 给第2个按钮绑定点击事件
+			btn2.onclick=function(){
+				// 变量a自动减10
+				a-=10
+				// 把a的值赋给p标签的font-size
+				box.style.fontSize=a+'px'
+				}
+				
+				btn3.onclick=function(){
+					box1.style.backgroundColor='red'
+				}
+				btn4.onclick=function(){
+					box1.style.backgroundColor='green'
+				}
+				btn5.onclick=function(){
+					box1.style.backgroundColor='blue'
+				}
+		</script>
+	</body>
+</html>

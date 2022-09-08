@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			let xin={
+				color: '绿色',
+				size: 'xxxl'
+			}
+			let ming=xin
+			ming.color='红色'
+			xin.size='m'
+			//销毁对象
+			xin=null//空地址
+			ming=null
+			
+			console.log(xin)
+			console.log(ming)
+			
+			//两个对象之间比较，比较的是地址
+			console.log(xin===ming)
+			
+			var n1=2
+			function fn(a){
+				a=5
+			}
+			fn(n1)
+			console.log(n1)  //?
+			
+			var p={c:3}
+			function fun(obj){
+				obj.c=6
+			}
+			fun(p)
+			console.log(p.c) //?
+		</script>
+	</body>
+</html>

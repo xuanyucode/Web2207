@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>垂直外边距合并</title>
+		<style>
+			.box1{
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				margin-bottom: 10px;
+			}
+			.box2{
+				width: 300px;
+				height: 200px;
+				background-color: orange;
+				/* 在文档流中，垂直方向的两个盒子之间的外边距会产生合并，取最大值。 */
+				margin-top: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<div class="box2"></div>
+	</body>
+</html>

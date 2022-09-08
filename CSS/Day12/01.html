@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>后台管理</title>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/bootstrap-icons.css">
+		<script src="js/bootstrap.bundle.js"></script>
+		<style>
+			.box {
+				margin-top: 56px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 导航 -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		  <div class="container-fluid">
+		    <a class="navbar-brand" href="#">后台管理</a>
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+		        <li class="nav-item">
+		          <a class="nav-link active" aria-current="page" href="#">首页</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="#">栏目</a>
+		        </li>
+		        <li class="nav-item dropdown">
+		          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		            内容
+		          </a>
+		          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+		            <li><a class="dropdown-item" href="#">Action</a></li>
+		            <li><a class="dropdown-item" href="#">Another action</a></li>
+		            <li><hr class="dropdown-divider"></li>
+		            <li><a class="dropdown-item" href="#">Something else here</a></li>
+		          </ul>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link disabled">Disabled</a>
+		        </li>
+		      </ul>
+		      <form class="d-flex" role="search">
+		        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+		        <button class="btn btn-outline-success" type="submit">Search</button>
+		      </form>
+		    </div>
+		  </div>
+		</nav>
+		
+		<!-- 容器 -->
+		<div class="container-fluid box">
+			<div class="row">
+				<div class="col-3 d-none d-lg-block">
+					<!-- 手风琴 -->
+					<div class="accordion" id="accordionExample">
+					  <div class="accordion-item">
+					    <h2 class="accordion-header" id="headingOne">
+					      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+					        <i class="bi bi-cart-fill me-2"></i>项目管理
+					      </button>
+					    </h2>
+					    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+					      <div class="accordion-body">
+					        <ul class="list-group list-group-flush">
+					          <li class="list-group-item">An item</li>
+					          <li class="list-group-item">A second item</li>
+					          <li class="list-group-item">A third item</li>
+					          <li class="list-group-item">A fourth item</li>
+					          <li class="list-group-item">And a fifth one</li>
+					        </ul>
+					      </div>
+					    </div>
+					  </div>
+					  <div class="accordion-item">
+					    <h2 class="accordion-header" id="headingTwo">
+					      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+					        <i class="bi bi-display-fill me-2"></i>商品管理
+					      </button>
+					    </h2>
+					    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+					      <div class="accordion-body">
+					        <ul class="list-group list-group-flush">
+					          <li class="list-group-item"><a href="#" class="text-decoration-none text-secondary">商品列表</a></li>
+					          <li class="list-group-item">A second item</li>
+					          <li class="list-group-item">A third item</li>
+					          <li class="list-group-item">A fourth item</li>
+					          <li class="list-group-item">And a fifth one</li>
+					        </ul>
+					      </div>
+					    </div>
+					  </div>
+					  <div class="accordion-item">
+					    <h2 class="accordion-header" id="headingThree">
+					      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+					        <i class="bi bi-person-fill me-2"></i>用户管理
+					      </button>
+					    </h2>
+					    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+					      <div class="accordion-body">
+					        <ul class="list-group list-group-flush">
+					          <li class="list-group-item">An item</li>
+					          <li class="list-group-item">A second item</li>
+					          <li class="list-group-item">A third item</li>
+					          <li class="list-group-item">A fourth item</li>
+					          <li class="list-group-item">And a fifth one</li>
+					        </ul>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+				
+				<!-- 右边 -->
+				<div class="col-lg-9">
+					<h2>用户列表</h2>
+					<table class="table text-secondary table-striped table-hover">
+						<tr>
+							<th>编号</th>
+							<th>用户名</th>
+							<th>手机</th>
+							<th>邮箱</th>
+							<th>操作</th>
+						</tr>
+						<!-- 单元格内容垂直居中 -->
+						<tr class="align-middle">
+							<td>1</td>
+							<td>tutu</td>
+							<td>111</td>
+							<td>222@qq.com</td>
+							<td>
+								<a href="#" class="btn btn-outline-primary">修改</a>
+								<a href="#" class="btn btn-outline-danger">删除</a>
+							</td>
+						</tr>
+						<tr class="align-middle">
+							<td>1</td>
+							<td>tutu</td>
+							<td>111</td>
+							<td>222@qq.com</td>
+							<td>
+								<a href="#" class="btn btn-outline-primary">修改</a>
+								<a href="#" class="btn btn-outline-danger">删除</a>
+							</td>
+						</tr>
+						<tr class="align-middle">
+							<td>1</td>
+							<td>tutu</td>
+							<td>111</td>
+							<td>222@qq.com</td>
+							<td>
+								<a href="#" class="btn btn-outline-primary">修改</a>
+								<a href="#" class="btn btn-outline-danger">删除</a>
+							</td>
+						</tr>
+						<tr class="align-middle">
+							<td>1</td>
+							<td>tutu</td>
+							<td>111</td>
+							<td>222@qq.com</td>
+							<td>
+								<a href="#" class="btn btn-outline-primary">修改</a>
+								<a href="#" class="btn btn-outline-danger">删除</a>
+							</td>
+						</tr>
+					</table>
+					
+					<!-- 分页 -->
+					<div class="row">
+						<div class="col-4 offset-4">
+						<nav>
+					  <ul class="pagination">
+					    <li class="page-item"><a class="page-link" href="#">上一页</a></li>
+					    <li class="page-item"><a class="page-link" href="#">1</a></li>
+					    <li class="page-item"><a class="page-link" href="#">2</a></li>
+					    <li class="page-item"><a class="page-link" href="#">3</a></li>
+					    <li class="page-item"><a class="page-link" href="#">下一页</a></li>
+					  </ul>
+					</nav>	
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

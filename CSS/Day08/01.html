@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.box {
+				width: 800px;
+				height: 500px;
+				background-color: pink;
+				margin: 50px auto;
+				display: flex;
+				/* 换行 */
+				flex-wrap: wrap;
+				/* 交叉轴只有一行align-items */
+				/* 交叉轴有多行 */
+				align-content: flex-start;
+				align-content: flex-end;
+			}
+			.box span {
+				width: 250px;
+				height: 150px;
+				background-color: orange;border: 1px solid red;
+			}
+			.box span:nth-child(5) {
+				order: -1;
+			}
+			.box span:nth-child(6) {
+				order: -2;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<span>1</span>
+			<span>2</span>
+			<span>3</span>
+			<span>4</span>
+			<span>5</span>
+			<span>6</span>
+		</div>
+	</body>
+</html>

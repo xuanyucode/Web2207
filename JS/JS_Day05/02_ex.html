@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#box {
+				width: 100px;
+				height: 40px;
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div><br>
+		<button id="btn1">变长</button>
+		<button id="btn2">变短</button>
+		
+		<script>
+			//全局变量
+			var a=100;
+			btn1.onclick=function() {
+				//在函数作用域下访问全局变量
+				a+=10;
+				console.log(a)
+				//把自增后的值赋给div的宽度
+				box.style.width=a+'px'
+			}
+			btn2.onclick=function() {
+				a-=10;
+				console.log(a)
+				box.style.width=a+'px'
+			}
+			
+		</script>
+	</body>
+</html>

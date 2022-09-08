@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			/* 并列选择器：标签同时被多个选择器查找到
+						  p.c1{   }   同时满足被选择器p和选择器.c1找到
+						  注意事项：选择器之间不能有空格 */
+			li.c1{
+				color: red;
+			}
+			p.c1{
+				color: blue;
+			}
+			.c2#c3{
+				color: green;
+			}
+			
+			/* 伪元素：是附加在标签中的一种选择器，会生成一个行内分区 */
+			/* 伪元素：在标签开始位置 */
+			h1::before{
+				/* 生成内容 */
+				content: "图图说：";
+				color: green;
+			}
+			/* 伪元素：在标签结束位置 */
+			h1::after{
+				content: "我说完了。";
+				color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<p class="c1">这是一个段落</p>
+		<ul>
+			<li class="c2" id="c3">列表项</li>
+			<li class="c1">列表项</li>
+			<li>列表项</li>
+		</ul>
+		
+		<h1>早上吃什么？</h1>
+		<h1>中午吃什么？</h1>
+		<h1>晚上吃什么？</h1>
+	</body>
+</html>

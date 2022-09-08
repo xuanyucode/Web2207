@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>转换</title>
+		<style>
+			.box1 {
+				width: 150px;
+				height: 150px;
+				background-color: pink;
+				/* 位移 */
+				/* transform: translate(-20px,-30px); */
+				/* 相对自身移动50% */
+				transform: translate(-50%,-50%);
+			}
+			.box2 {
+				width: 300px;
+				height: 200px;
+				background-color: orange;
+				position: relative;
+				transform: translate(50px,50px);
+			}
+			.box2 p {
+				margin: 0;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<div class="box2">
+			<p>一段要居中的文字<br>一段要居中的文字</p>
+		</div>
+	</body>
+</html>

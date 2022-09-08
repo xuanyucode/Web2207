@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.box {
+				width: 1000px;
+				height: 720px;
+				background-color: pink;
+				margin: 100px auto;
+				/* 弹性布局 */
+				display: flex;
+				/* 主轴中项目的对齐方式 */
+				/* 起点对齐（默认） */
+				/* justify-content: flex-start; */
+				/* 终点对齐 */
+				/* justify-content: flex-end; */
+				/* 居中对齐 */
+				/* justify-content: center; */
+				/* 两端对齐 */
+				/* justify-content: space-between; */
+				/* 平均分配 */
+				/* justify-content: space-around; */
+				/* justify-content: space-evenly; */
+				
+				/* 项目的换行 */
+				/* 默认不换行 */
+				/* flex-wrap: nowrap; */
+				/* 换行 */
+				/* flex-wrap: wrap; */
+				/* 换行反向排列 */
+				/* flex-wrap: wrap-reverse; */
+				/* flex-direction: row; */
+				/* 设置主轴排列和项目是否换行的综合写法 */
+				flex-flow: row wrap;
+			}
+			.box span {
+				width: 280px;
+				height: 300px;
+			}
+			.box span:nth-child(1){
+				background-color: orange;
+			}
+			.box span:nth-child(2){
+				background-color: lightblue;
+			}
+			.box span:nth-child(3){
+				background-color: seagreen;
+			}
+			.box span:nth-child(4){
+				background-color: green;
+			}
+			.box span:nth-child(5){
+				background-color: purple;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<span>1</span>
+			<span>2</span>
+			<span>3</span>
+			<span>4</span>
+			<span>5</span>
+		</div>
+	</body>
+</html>

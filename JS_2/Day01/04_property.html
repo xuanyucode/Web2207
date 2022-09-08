@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="cont"></p>
+		<script>
+			let phone={
+				color: 'red',
+				price: 99
+				
+			}
+			console.log(phone.color===undefined)
+			console.log(phone.hasOwnProperty('price'))
+			console.log('price' in phone)
+			
+			let product={
+				title: 'mi 8',
+				price: 999,
+				
+			}
+			if('price' in product){
+				product.price*=0.8
+			}
+			if(!('title' in product)){
+				product.title='mi 8'
+			}
+			console.log(product)
+			let str='标题：'+product.title+'<br>价格：'+product.price
+			cont.innerHTML=str
+		</script>
+	</body>
+</html>

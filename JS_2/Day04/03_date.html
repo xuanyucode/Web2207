@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Date对象</title>
+	</head>
+	<body>
+		<script>
+			//创建
+			let d1=new Date('2022/9/6 11:11:11')
+			console.log(d1)
+			
+			let d2=new Date(2022,8,6,11,11,11) //第二个月份值0~11对应1~12月
+			console.log(d2)
+			
+			let d3=new Date() //系统时间
+			console.log(d3)
+			console.log(d3.toLocaleString())//转为本地字符串
+			
+			//时间戳：距离计算机元年(0时区 1970-1-1 0:0:0)毫秒数
+			let d4=new Date(163000000000)
+			console.log(d4)
+			
+			let d5=new Date('2022/9/4 10:10:10')
+			//获取存储的值
+			console.log(d5.getFullYear())
+			//月份的值0~11，使用的时候+1
+			console.log(d5.getMonth()+1)
+			console.log(d5.getDate())
+			//范围0~6，星期日为0
+			console.log(d5.getDay())
+			// getHours() getMinutes() getSeconds() getMilliseconds()
+			
+			
+			let d6=new Date('2022/9/6 15:21:30')
+			//拷贝一个Date对象
+			let d7=new Date(d6)
+			//设置
+			d6.setFullYear(2024)
+			d6.setMonth(12)
+			// d6.setHours(20)
+			d6.setHours(d6.getHours()-3)//三小时前
+			d6.setDate(d6.getDate()+14)//两周以后：设置的值为当前的日期+14
+			//设置时间戳
+			d6.setTime(2641354125342)
+			//设置星期
+			// d6.setDay(5)
+			console.log(d6.setDay)//打印API 存在得到一个函数 不存在得到undefined
+			console.log(d6.toLocaleString())
+			console.log(d7.toLocaleString())
+		</script>
+	</body>
+</html>

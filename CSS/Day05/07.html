@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>清除浮动</title>
+		<style>
+			.box {
+				width: 960px;
+				background-color: pink;
+				margin: 0 auto;
+				/* 清除浮动：溢出隐藏法
+				 在浮动的父盒子中添加溢出隐藏属性
+				 不足：有些定位到外部的盒子也会被隐藏*/
+				/* overflow: hidden; */
+			}
+			.left {
+				width: 240px;
+				height: 350px;
+				background-color: lightblue;
+				float: left;
+			}
+			.right {
+				width: 700px;
+				background-color: orange;
+				float: right;
+			}
+			.footer {
+				height: 100px;
+				background-color: lightgreen;
+			}
+			
+			/* 清除浮动：额外标签法
+			 在所有浮动盒子后面添加一个空的div 然后给div添加样式clear:both
+			 不足：会多出一个空标签
+			 注意：只能添加一个块状标签 不能使用行内标签*/
+/* 			.clear {
+				clear: both;
+			} */
+			
+			/* 清除浮动：伪元素
+			 .clearfix::after{
+			   content: "";
+			   display: block;
+			   clear: both;
+			 }
+			 在所有浮动盒子的父盒子中调用clearfix
+			 */
+			.clearfix::after {
+				content: "";
+				/* 伪元素属于行内元素，需要转为块状 */
+				display: block;
+				clear: both;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box clearfix">
+			<div class="left"></div>
+			<div class="right">
+				<h1>这是一个文章标题</h1>
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius ipsam cupiditate nam et inventore aperiam rerum quo nisi, possimus fuga, rem consectetur quaerat provident eligendi saepe ratione repellendus ducimus commodi.</p>
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius ipsam cupiditate nam et inventore aperiam rerum quo nisi, possimus fuga, rem consectetur quaerat provident eligendi saepe ratione repellendus ducimus commodi.</p>
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius ipsam cupiditate nam et inventore aperiam rerum quo nisi, possimus fuga, rem consectetur quaerat provident eligendi saepe ratione repellendus ducimus commodi.</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, optio. Dignissimos incidunt repellat numquam quas eum, corporis quibusdam nulla ut perspiciatis quisquam nesciunt perferendis optio explicabo temporibus magni. Quibusdam, magnam!</p>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime impedit neque officiis laboriosam sed eos, aliquid enim nesciunt laborum nemo quas molestiae nam. Ad perspiciatis voluptas, nostrum eveniet amet cumque.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="footer"></div>
+	</body>
+</html>

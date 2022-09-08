@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="cont"></p>
+		<script>
+			let company={
+				cname: '人生无限公司',
+				addr: '北京市',
+				tel: '133',
+				fax: '133',
+				code: '100100'
+			}
+			let str= company.cname+'<br>地址：'+company.addr+'<br>电话：'+company.tel+'<br>传真：'+company.fax+'<br>邮编：'+company.code
+			cont.innerHTML=str
+			
+			let str1=`
+			<h3> 公司名：${company.cname} </h3>
+			<ul>
+				<li>地址：${company.addr}</li>
+				<li>电话📞：${company.tel}</li>
+				<li>传真：${company.fax}</li>
+				<li>邮编：${company.code}</li>
+			</ul>
+			`
+			cont.innerHTML=str1
+			
+			//模板字符串
+			let phone={
+				brand: 'xiaomi',
+				price: '6999',
+				onsale: false
+			}	
+			let str2=`
+			名称：${phone.brand} <br>
+			价格：${phone.price*0.8} <br>
+			是否在售：${phone.onsale ? '是' : '否'}
+			`
+			console.log(str2)
+		</script>
+	</body>
+</html>

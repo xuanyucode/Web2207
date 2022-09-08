@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.big{
+				width: 400px;
+				height: 300px;
+				background: pink;
+/* 				border-top: 5px  solid red; */
+				overflow:hidden;
+			}
+			
+			/* 在父元素的第一个子元素中，设置上边距，会出现在父元素顶部
+				解决方法：
+				  1.改用给父元素添加内边距
+				  2.给父元素添加上边框
+				  3.给父元素添加溢出隐藏属性
+				   overflow:hidden; */
+			.small{
+				width: 200px;
+				height: 150px;
+				background: orange;
+				margin-top: 20px;
+			}
+			
+			.box{
+				width: 100px;
+				height: 100px;
+				background: lightblue;
+				overflow:hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="big">
+			<div class="small"></div>
+		</div>
+		
+		<div class="box">
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet eum tenetur, incidunt accusamus labore fugiat illum voluptates quia harum dolorem doloremque, architecto aperiam dolor? Vel dolorem sapiente debitis odio quia!
+		</div>
+	</body>
+</html>

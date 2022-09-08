@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>导航</title>
+		<style>
+			/* 第一步去除所有标签自带样式 */
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			/* 去除列表自带样式 */
+			ul {
+				list-style: none;
+			}
+			/* 清除浮动 */
+			.clearfix::after {
+				content: "";
+				display: block;
+				clear: both;
+			}			
+			.guide {
+				width: 1000px;
+				background-color: pink;
+				/* 版心 */
+				margin: 100px auto; 
+			}
+			.guide ul li {
+				font-size: 16px;
+				height: 40px;
+				padding: 0 15px;
+				line-height: 40px;
+				float: left;
+				background-color: lightblue;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="guide clearfix">
+			<ul>
+				<li><a href="#">关于汉唐</a></li>
+				<li><a href="#">新闻中心</a></li>
+				<li><a href="#">企业简介</a></li>
+			</ul>
+		</div>
+	</body>
+</html>

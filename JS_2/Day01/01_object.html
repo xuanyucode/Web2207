@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>自定义对象</title>
+	</head>
+	<body>
+		<script>
+		//自定义对象
+		//创建方式：对象字面量
+		var phone={
+			color: '黑色',
+			size: 6.3,
+			brand: 'xiaomi',
+			'made-in': 'China'
+			}
+		console.log(phone)
+		
+		let product={
+			pid: 1,
+			title: '商品',
+			price: 9999,
+			stock: 1
+		}
+		console.log(product)
+		
+		let book={
+			bid: 1551,
+			bname: '三体',
+			author: '尼古拉斯_图图',
+			price: 0.99
+		}
+		book.price *= 0.99
+		book.time = 2022
+		console.log(book)
+		</script>
+	</body>
+</html>

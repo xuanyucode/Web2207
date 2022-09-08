@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>login</title>
+		<style>
+			/* CSS初始化，去除标签自带的样式 */
+			* {
+				margin: 0;
+				padding: 0;
+				/* 设置怪异盒模型 */
+				box-sizing: border-box;
+			}
+			.box{
+				width: 300px;
+				border: 2px solid #3C545C;
+				margin: 100px auto;
+			}
+			.box .header{
+				width: 80px;
+				height: 80px;
+				margin: 0 auto;
+				margin-top: -40px;
+			}
+			.box .header img {
+				width: 80px;
+				height: 80px;
+				display: block;
+				/* 将盒子设置为圆形 */
+				border-radius: 50%;
+			}
+			.box .login {
+				width: 80%;
+				margin: 0 auto;	
+				margin-top: 5px;
+			}
+			.box .login input {
+				width: 100%;
+				/* 转为块状可以去除上下边距 */
+				display: block;
+				margin-bottom: 20px;
+				height: 30px;
+				padding: 0 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="header">
+				<img src="img/秀晶mini.jpg" alt="加载失败">
+			</div>
+			<div class="login">
+				<input type="text" placeholder="请输入用户名">
+				<input type="password" placeholder="请输入密码">
+				<input type="submit" value="登录">
+			</div>
+		</div>
+	</body>
+</html>

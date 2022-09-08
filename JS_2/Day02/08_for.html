@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			let arr=['a','b','c','d']
+			for(let k in arr){
+				console.log(k,arr[k])
+			}
+			
+			let arr2=[1,2,3]
+			for(let k in arr2){
+				console.log(k,arr2[k])
+			}
+			
+			for(let i=0;i<arr2.length;i++){
+				// console.log(i)//下标
+				console.log(arr2[i])//元素
+			}
+			
+			let score=[55,66,77,88]
+			let sum=0,avg=0
+			for(let i=0;i<score.length;i++){
+				sum+=score[i]
+			}
+			console.log(sum,sum/score.length)
+			
+			//给max赋值为数组里的数
+			let max=score[0]
+			for(let i=0;i<score.length;i++){
+				max>score[i] ? max : max=score[i]
+			}
+			console.log(max)
+		</script>
+	</body>
+</html>

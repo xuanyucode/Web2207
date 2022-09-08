@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>首字母大写，随机点名，倒计时</title>
+	</head>
+	<body>
+		<button id='btn'>点击抽奖</button>
+		<span id='cont'></span>
+		<span id='cont1'></span>
+		<script>
+			//设置首字母大写 其余字母小写
+			let str='hOw aRE yOU'
+			//字符串转数组 按空格分隔
+			let arr=str.split(' ')
+			for(let i=0;i<arr.length;i++){
+				console.log(arr[i])//每个单词
+				//截取首字母转大写，截取其余字母转小写
+				var f=arr[i].slice(0,1).toUpperCase()
+				var o=arr[i].slice(1).toLowerCase()
+				arr[i]=f+o
+			}
+			console.log(arr.join(' '))//转回字符串 用空格隔开
+			
+			
+			//随机点名
+			let arr1=['图图1','图图2','图图3','图图4','图图5','秀晶1','秀晶2','秀晶3','秀晶4','秀晶5']
+			//随机获取0~9之间一个整数，作为下标找元素
+			btn.onclick=function(){
+				//0~1 * 10   0~9.x   向下取整
+				let n=Math.floor(Math.random()*arr1.length)
+				console.log(n)//获取随机元素
+				cont.innerHTML=arr1[n]
+			}
+			
+			
+			//随机获取A~Z之间的四个字母，放入一个新数组
+			var arr2=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+			var arr3=[]
+				for(i=0;i<4;i++){
+					var m=Math.floor(Math.random()*arr2.length)
+					arr3.push(arr2[m])
+					//防止重复 从数组中删除已获取的元素
+					arr2.splice(m,1)
+					
+				}
+				console.log(arr3)
+				console.log(arr2)
+			
+			
+			//创建对象，保存当前操作系统时间，获取日期时间，打印以下格式：
+			//今天是xxxx年xx月xx日 星期x
+			let d=new Date()
+			//获取对象的时间戳
+			console.log(d.getTime())
+			//获取当前时间的时间戳
+			console.log(Date.now())
+			
+			let year=d.getFullYear()
+			let month=d.getMonth()+1
+			let date=d.getDate()
+			let arrday=['日','一','二','三','四','五','六']
+			let day=arrday[d.getDay()]
+			document.write(`<br><br>今天是${year}年${month<10 ? '0'+month : month}月${date<10 ? '0'+date : date}日 星期${day}`) 
+			
+			
+			//计算距离中秋节还有x天x小时x分x秒
+			let mid_autumn=new Date('2022/9/10')
+			//计算相差时间
+			let d1=mid_autumn.getTime() - Date.now()
+			//把相差时间转化为秒
+			d1=parseInt(d1/1000)
+			let day1=parseInt(d1/(60*60*24))
+			let hour=parseInt(d1/(60*60)%24)
+			let min=parseInt(d1/60%60)
+			let sec=parseInt(d1%60)
+			document.write(`<br><br>距离中秋节还有${day1}天${hour}小时${min}分钟${sec}秒`)
+			
+			
+			/*创建Date1保存一个员工的入职时间2022/9/6，合同期三年，计算到期时间；到期前一个月要进行续签，计算出续签时间；最后打印以下格式
+			入职时间：xxx
+			到期时间：xxx
+			续签时间：xxx */
+			let Date1=new Date('2022/9/6')
+			let Date2=new Date(Date1)
+			Date1.setFullYear(Date1.getFullYear()+3)
+			let Date3=new Date(Date1)
+			Date1.setMonth(Date1.getMonth()-1)
+			
+			document.write(`<br><br>入职时间${Date2.toLocaleDateString()}<br>到期时间${Date3.toLocaleDateString()}<br>续签时间${Date1.toLocaleDateString()}`)
+		</script>
+	</body>
+</html>

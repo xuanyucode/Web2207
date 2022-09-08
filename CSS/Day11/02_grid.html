@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>栅格化布局</title>
+		<link rel="stylesheet" href="css/bootstrap.css">
+	</head>
+	<body>
+		<!-- 容器 -->
+		<div class="container">
+			<div class="row">
+			<!-- 行 -->
+			<div class="col-3 bg-primary">左侧秀晶盒子(1/4)</div>
+			<div class="col-9 bg-success">右侧秀晶盒子(3/4)</div>
+			</div>
+			
+			<div class="row mt-4">
+				<!-- col-xl 1200xp以上才起作用 -->
+				<!-- col-lg 992xp以上才起作用 -->
+				<!-- 在992xp以上每个盒子占四份 -->
+				<div class="col-xl-3 col-lg-4 col-md-6 bg-black">1</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 bg-danger">2</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 bg-primary">3</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 bg-warning">4</div>
+				
+				<!-- 栅格化居中 -->
+				<div class="row">
+					<!-- offset-4 往右偏移4格 -->
+					<div class="col-4 bg-danger offset-4 mt-4">
+						123
+					</div>
+				</div>
+				
+				<div class="mb-3">
+				  <label for="formGroupExampleInput" class="form-label">用户名</label>
+				  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="请输入用户名">
+				</div>
+				<div class="mb-3">
+				  <label for="formGroupExampleInput2" class="form-label">密码</label>
+				  <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="请输入密码">
+				</div>
+				<button class="btn btn-primary">提交</button>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 企业发放的奖金根据利润提成。
+		利润(I)低于或等于10万元时，奖金可提10%；
+		利润高于10万元，低于20万元时，
+		低于10万元的部分按10%提成，高于10万元的部分，可提成7.5%；
+		20万到40万之间时，高于20万元的部分，可提成5%；
+		40万到60万之间时，高于40万元的部分，可提成3%；
+		60万到100万之间时，高于60万元的部分，可提成1.5%；
+		高于100万元时，超过100万元的部分按1%提成；
+		从键盘输入当月利润I，求应发放奖金总数？ -->
+	</head>
+	<body>
+		<input type="text" placeholder="请输入利润(万)" id="profit">
+		<button id="btn">计算奖金</button>
+		<script>
+			btn.onclick=function() {
+			var bonus=0,pft=Number(profit.value)
+			if (pft<=10){
+				bonus=.1*pft
+			}else if (pft<=20){
+				bonus=10*.1+.075*(pft-10)
+			}else if (pft<=40){
+				bonus=10*.1+10*.075+.05*(pft-20)
+			}else if (pft<=60){
+				bonus=10*.1+10*.075+20*.05+.03*(pft-40)
+			}else if (pft<=100){
+				bonus=10*.1+10*.075+20*.05+20*.03+.015*(pft-60)
+			}else if (pft>100){
+				bonus=10*.1+10*.075+20*.05+20*.03+.015*40+.01*(pft-100)
+			}
+			console.log('奖金是'+bonus+'万');
+			}
+		</script>
+	</body>
+</html>

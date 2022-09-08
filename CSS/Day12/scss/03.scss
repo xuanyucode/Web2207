@@ -1,0 +1,57 @@
+//混入
+//容器
+@mixin box {
+	//放一组css属性
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+}
+
+.box1 {
+	background-color: pink;
+	text-align: center;
+	//混入
+	@include box;
+}
+
+.box2 {
+	// 背景
+	background-color: orange;
+	// 混入进来
+	@include box;
+}
+
+
+// $a 用于接收传递进来的值
+@mixin boa($a,$b,$c) {
+	width: $a;
+	height: $b;
+	border-radius: $c;
+}
+
+.box3 {
+	background-color: lightblue;
+	// 混入: 需要传递值
+	@include boa(300px,100px,10px);
+}
+.box4 {
+	background-color: lightgreen;
+	// 混入
+	@include boa(400px,200px,5px);
+}
+
+@mixin btn($w,$h,$bgc,$tc,$s,$r) {
+	width: $w;
+	height: $h;
+	background-color: $bgc;
+	color: $tc;
+	font-size: $s;
+	border-radius: $r;
+	border: none;
+}
+.btn-info {
+	@include btn(120px, 36px, blue, white, 18px, 3px)
+}
+.btn-success {
+	@include btn(120px, 36px, green, white, 16px, 2px)
+}

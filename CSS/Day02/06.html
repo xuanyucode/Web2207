@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>文档流——显示模式</title>
+		<style>
+			/* 块级元素：会独占一行，有宽高属性 div  h1~h6  p  ul  ol  li  dl  dt  dd
+			行内元素：会和其它的行内共处一行，没有宽高属性 span  b  u  I  s  a…
+			行内块元素：会和其它的行内共处一行，有宽度属性 input  select  textarea */
+			div{
+				background-color: pink;
+				width: 150px;
+				height: 150px;
+				display: inline;
+				/* 转为行内元素 */
+			}
+			h1{
+				width: 120px;
+				height: 120px;
+				background-color: orangered;
+			}
+			span{
+				width: 180px;
+				height: 180px;
+				background-color: green;
+				display: inline-block;
+				/* 转为行内块元素 */
+			}
+			input[type="text"]{
+				width: 200px;
+				height: 40px;
+				display: block;
+				/* 转为块状元素 */
+			}
+			input[type="submit"]{
+				width: 100px;
+				height: 40px;
+				display: inline-block;
+			}
+			
+			img{
+				/* 小技巧：去除图片底部空隙 给图片添加 display：block */
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div>一个div</div>
+		<h1>标题一</h1>
+		<span>图图</span>
+		<b>加粗的</b>
+		<i>倾斜的</i>
+		<input type="text">
+		<input type="submit">
+		<img src="秀晶1.jpg" width="100px" alt="">
+		<img src="秀晶1.jpg" width="100px" alt="">
+		<img src="秀晶1.jpg" width="100px" alt="">
+		<img src="秀晶1.jpg" width="100px" alt="">
+		<img src="秀晶1.jpg" width="100px" alt="">
+		<img src="秀晶1.jpg" width="100px" alt="">
+	</body>
+</html>

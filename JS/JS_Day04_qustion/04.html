@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 输入某年某月某日，判断这一天是这一年的第几天？ -->
+	</head>
+	<body>
+		<script>
+			function isDay(y,m,d){
+			let day;
+			let days=0;
+			if(m>12 || m<0 || d>31 || d<0 ) {
+				return;
+			}
+			for (let i=1;i<m;i++) {
+				switch (i) {
+					case 1:
+					case 3:
+					case 5:
+					case 7:
+					case 8:
+					case 10:
+					case 12:{
+						day=31;
+						break;	
+					}
+					case 4:
+					case 6:
+					case 9:
+					case 11:{
+						day=30;
+						break;
+					}
+					case 2:{
+						if (y%4===0 && y%100!==0 ||y%400===0){
+							day=29;
+						}else {
+							day=28;
+						}
+					}
+				}
+			days+=day;	
+			}
+			console.log(d+days)
+			}
+			isDay(2022,2,30)
+			
+		</script>
+	</body>
+</html>

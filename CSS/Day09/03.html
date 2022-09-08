@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			/* 自定动画 */
+			/* 关键帧：定义动画名称 */
+			@keyframes move {
+				from {
+					/* 开始的状态 */
+					transform:translate(0,0);
+				}
+				to {
+					/* 结束的状态 */
+					transform:translate(600px,0);
+				}
+			}
+			
+			@keyframes move2 {
+				/* 多组帧 */
+				0% {
+					transform: translate(0,0) scale(1);
+				}
+				50% {
+					transform: translate(300px,300px) scale(1.5);
+				}
+				100% {
+					transform: translate(600px,0) scale(1);
+				}
+			}
+			@keyframes move3{
+				0% {
+					transform: rotate(0deg);
+				}
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+			div {
+				width: 100px;
+				height: 100px;
+				margin: 50px auto;
+				text-align: center;
+				line-height: 100px;
+				font-size: 24px;
+				background-color: orange;
+				border-radius: 50%;
+				animation: move3 1s linear infinite paused;
+			}
+			/* 鼠标滑过，停止动画 */
+			div:hover {
+				/* 动画播放状态 running paused*/
+				animation-play-state: running;
+			}
+			img {
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				/* 调用动画 */
+				/* 无限次数 infinnite 是否交替alternate */
+				animation: move 1s 1s linear infinite alternate;
+				animation: move2 2s linear infinite alternate;
+			}
+			img:hover {
+				animation-play-state: paused;
+			}
+		</style>
+	</head>
+	<body>
+		<div>我是秀晶</div>
+		<img src="img/秀晶mini.jpg" alt="">
+	</body>
+</html>

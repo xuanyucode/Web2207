@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>遍历属性</title>
+	</head>
+	<body>
+		<script>
+			let person={
+				name: 'tut',
+				sex: '男',
+				birthday: '2000-10-6',
+				addr: '翻斗花园'
+			}
+			for(let k in person){
+				console.log(k)
+				console.log(person[k])
+			}
+			
+			let grad={
+				math: 0,
+				eng: 80,
+				cacl: 99,
+				chi: 88,
+			}
+			let sum=0
+			let count=0
+			
+			for(let k in grad){
+				console.log(k,grad[k])
+				sum+=grad[k]
+				count++
+			}
+			console.log('sum='+sum)
+			console.log('avg='+sum/count)
+		</script>
+	</body>
+</html>

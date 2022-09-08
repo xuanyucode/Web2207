@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>弹性布局</title>
+		<style>
+			.box {
+				width: 1000px;
+				height: 300px;
+				background-color: pink;
+				margin: 50px auto;
+				display: flex;
+				}
+				.box span {
+					width: 250px;
+					height: 300px;
+				}
+				.box span:nth-child(1) {
+					background-color: orange;
+					flex-grow: 1;
+				}
+				.box span:nth-child(2) {
+					background-color: red;
+					/* 分配剩余空间
+					 0不分配
+					 1整个
+					 */
+					flex-grow: 2;
+				}
+				.box span:nth-child(3) {
+					background-color: blue;
+					flex-grow: 1;
+				}
+			/* 双飞翼(圣杯)布局 */
+			.box2 {
+				width: 100%;
+				height: 300px;
+				background-color: lightgreen;
+				display: flex;
+			}
+			.box2 span {
+				width: 200px;
+				height: 300px;
+				background-color: darkgreen;
+			}
+			.box2 span:nth-child(2) {
+				background-color: lightcoral;
+				/* flex-grow: 1; */
+				/* 另一种写法 */
+				flex: 1;
+			}
+		</style>
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<span>1</span>
+			<span>2</span>
+			<span>3</span>
+		</div>
+		<div class="box2">
+			<span>1</span>
+			<span>2</span>
+			<span>3</span>
+		</div>
+	</body>
+</html>

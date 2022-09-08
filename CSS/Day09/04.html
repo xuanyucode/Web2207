@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			ul,ol {
+				list-style: none;
+			}
+			.box {
+				width: 1000px;
+				margin: 100PX auto	;
+				background: pink;
+				overflow: hidden;
+			}
+			@keyframes run {
+				0%{
+					transform: translate(0);
+				}
+				100%{
+					transform: translate(-2000px);
+				}
+			}
+			.box ul {
+				display: flex;				
+				width: 5000px;
+				/* 给ul添加动画，往左侧移动1000像素 */
+				animation: run 8s linear infinite;
+			}
+			.box ul:hover {
+				animation-play-state: paused;
+			}
+			.box ul li {
+				width: 127px;
+				height: 30px;
+				border: 1px solid red;
+				text-align: center;
+				line-height: 30px;
+				margin-right: 16px;
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+				<li>10</li>
+				<li>11</li>
+				<li>12</li>
+				<li>13</li>
+				<li>14</li>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+			</ul>
+		</div>
+	</body>
+</html>

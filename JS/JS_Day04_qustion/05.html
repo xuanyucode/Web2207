@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 输入三个整数x,y,z，请把这三个数由小到大输出。 -->
+	</head>
+	<body>
+		<input type="text" placeholder="请输入X" id="num1"><br>
+		<input type="text" placeholder="请输入Y" id="num2"><br>
+		<input type="text" placeholder="请输入Z" id="num3"><br>
+		<button id="btn">排序</button>
+		<script>
+			btn.onclick=function() {
+				var a=num1.value;
+				var b=num2.value;
+				var c=num3.value;
+				var nums = [a,b,c];
+				
+				// nums.sort(function(a, b) {
+				//   return a - b;
+				// });
+				
+				// nums.sort((a, b) => a - b);
+				
+				alert(nums);
+			}
+		</script>
+	</body>
+</html>

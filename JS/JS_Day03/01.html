@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 输入商品的单价数量，计算出总价，如果总价满1000打九折；
+		假设当前会员卡内余额有1500，如果足以支付，警示框弹出'支付成功'，否则警示框弹出'余额不足' -->
+	</head>
+	<body>
+		单价 <input type="text" id="price"><br>
+		数量 <input type="text" id="number"><br><br>
+		<button id="btn">支付</button>
+		<script>
+			
+			
+			btn.onclick=function(){
+			var total = Number(price.value) * Number(number.value)	
+			console.log(total)
+			if (total >= 1000) 
+			total*=0.9	
+			console.log(total)	
+			var card=1500
+			if (card >= total) {
+				alert('支付成功')
+			} else{
+				alert('没钱')
+			}
+			}
+			
+			// 循环打印出2000~2100之间所有的闰年
+			for (var year=2000;year<2101;year++){
+				if (year%4==0 && year%100!=0 || year%400==0)
+				console.log(year)
+			}
+			
+			//计算出1~100之间所有的整数和，一旦总和超过4000，强制结束循环，打印当前总和。
+			var i=1
+			var sum=0
+			while(i<=100) {
+				sum+=i
+				if (sum>4000) {
+					break
+				}
+				i++
+			}
+			console.log(sum,i)
+		</script>
+	</body>
+</html>

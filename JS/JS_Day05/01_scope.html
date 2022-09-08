@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>作用域</title>
+	</head>
+	<body>
+		<script>
+			/*
+			// 全局作用域
+			// 全局变量
+			var a='北京市城管'
+			function shi(){
+				// 函数作用域
+				// 局部变量
+				var b='石景山城管'
+				console.log(a)
+			}
+			shi()
+			// 全局作用域无法访问局部变量
+			// console.log(b) //报错
+			
+			function hai(){
+				// 函数作用域
+				// 局部变量
+				var c='海淀城管'
+			}
+			*/
+			
+			 /*
+			// 全局变量
+			var n1=2
+			function fn(){
+				// 访问到n1后，修改n1的值
+				n1=4
+				// 在函数内，不加var声明的变量是全局变量
+				n2=5
+			}
+			fn()
+			console.log(n1)
+			console.log(n2)
+			*/
+			
+			function fun(){
+				// 执行过程
+				// m3=5   //全局变量
+				// m2=m3  //全局变量
+				// var m1=m2 //局部变量
+				var m1=m2=m3=5
+			}
+			fun()
+			console.log(m3) //5
+			console.log(m2) //5
+			console.log(m1) //m1 is not defined
+		</script>
+	</body>
+</html>

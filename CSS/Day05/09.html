@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>文本处理</title>
+		<style>
+			html {
+				font-size: 12px;
+				font-family: "宋体";
+			}
+			p {
+				/* font-size: 14px; */
+				/* em相对于父级文字大小 */
+				/* font-size: 2em; */
+				/* rem 相对于根标签html的文字大小 */
+				font-size: 2rem;
+				/* 字体家族：中文需要""包裹 英文不需要 */
+				/* font-family: "楷体"; */
+				/* font-weight: 400; */
+				/* font-weight: bold; */
+				/* text-align: right; */
+				/* text-decoration: underline; */
+				/* text-decoration: line-through; */
+				/* text-indent: 2em; */
+				width: 300px;
+				height: 190px;
+				border: 1px solid red;
+				text-overflow: ellipsis;				
+				/* white-space:nowrap;*/
+				overflow: hidden;
+				
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 7;
+				-webkit-box-flex: 7;
+			}
+			p:hover 
+				{ 
+				text-overflow:inherit; 
+				overflow:visible; 
+				}
+			div {
+				font-size: 24px;
+				width: 30px;
+				height: 200px;
+				text-overflow: ellipsis;
+			}
+			h1 {
+				font-weight: normal;
+			}
+			a,s {
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>qqq</h1>
+		<a href="">111</a>
+		<p>应做如是观Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sequi odio ea enim provident. Id at facilis, eum quas illum vero exercitationem commodi quaerat, voluptas animi esse suscipit, voluptatem hic?</p>
+		<div>这是标准字体</div>
+	</body>
+</html>

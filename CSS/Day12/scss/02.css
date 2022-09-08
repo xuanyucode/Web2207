@@ -1,0 +1,28 @@
+.box {
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f40;
+  box-shadow: 5px 7px 5px rgba(0, 0, 0, 0.5); }
+  .box:hover {
+    background-color: #f40; }
+  .box > span {
+    font-size: 20px; }
+
+h2 {
+  color: #f40; }
+
+button {
+  background-color: #f40;
+  width: 300px;
+  height: 200px;
+  box-shadow: 5px 7px 5px rgba(0, 0, 0, 0.5); }
+
+ul {
+  width: 300px;
+  background-color: pink; }
+  ul li {
+    list-style: none; }
+    ul li:first-child {
+      background-color: red; }
+    ul li:last-child {
+      background-color: orange; }

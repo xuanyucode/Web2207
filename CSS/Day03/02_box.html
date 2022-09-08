@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.box1{
+				width: 300px;
+				background-color: pink;
+				border-left: 5px solid red;
+				border-top: 5px dashed blue;
+				border-right: green 5px dotted;
+				border-bottom: blue dashed 5px;
+				padding: 30px;
+				padding: 10px 30px;
+				padding: 10px 20px 30px;
+				padding: 10px 20px 30px 40px;
+				/* 外边距: 盒子在网页中所占空间大小=盒子实际大小+外边距*/
+				margin-top: 30px;
+			}
+			
+			/* 标准(W3C)盒模型:
+				盒子实际宽度=内容宽度+左右内边距+左右边框
+				盒子实际高度=内容高度+上下内边距+上下边框 */
+			.box2{
+				width: 270px;
+				height: 100px;
+				background: #d61212;
+				color: #FFF;
+				padding: 30px 0 0 20px;
+				border-left: 5px solid green;
+			}
+			
+			.box3{
+				width: 400px;
+				height: 300px;
+				background: orange;
+				padding: 10px 20px;
+				/* 默认为标准盒
+				 切换盒模型：
+				   box-sizing: content-box;  内容盒子(标准盒模型) —— 默认的
+				   box-sizing: border-box; 边框盒子（怪异盒模型）*/
+				box-sizing: border-box;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel corrupti, saepe, sunt cumque deleniti hic perferendis asperiores voluptas culpa harum iste reiciendis velit voluptatum repellat fuga! Laudantium mollitia ea magnam!
+		</div>
+		<br>
+		
+		<div class="box2">
+			Lorem, ipsum dolor
+		</div>
+		
+		<div class="box3">
+			
+		</div>
+	</body>
+</html>

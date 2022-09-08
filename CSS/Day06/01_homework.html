@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>网页布局练习</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			header {
+				width: 1000px;
+				height: 110px;
+				margin: 0 auto;
+				background-color: pink;
+			}
+			nav {
+				width: 1000px;
+				height: 40px;
+				margin: 20px auto;
+				background-color: orange;
+			}
+			.container {
+				width: 1000px;
+/* 				height: 300px; */
+				background-color: lightblue;
+				margin: 0 auto 20px;
+			}
+			aside {
+				width: 300px;
+				height: 300px;
+				background-color: lightgreen;
+				float: left;
+			}
+			article {
+				width: 680px;
+				height: 300px;
+				background-color: lightcoral;
+				float: right;
+			}
+			/* 清浮动 */
+			.clearfix::after {
+				content: "";
+				display: block;
+				clear: both;
+			}
+			.b1,.b2,.b3 {
+				width: 320px;
+				height: 300px;
+				background-color: deepskyblue;
+			}
+			.b1 {
+				float: left;
+				margin-right: 20px;
+			}
+			.b2 {
+				float: left;
+			}
+			.b3 {
+				float: right;
+			}
+			footer {
+				width: 1000px;
+				height: 80px;
+				background-color: orangered;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<!-- 头部   语义-->
+			<header></header>
+			<!-- 导航 -->
+			<nav></nav>
+			<!-- 区域 -->
+			<section class="container clearfix">
+				<!-- 侧边栏 -->
+				<aside></aside>
+				<!-- 文章（内容） -->
+				<article></article>
+			</section>
+			<!-- 区域 -->
+			<section class="container clearfix">
+				<section class="b1"></section>
+				<section class="b2"></section>
+				<section class="b3"></section>
+			</section>
+			<footer></footer>
+		</div>
+	</body>
+</html>

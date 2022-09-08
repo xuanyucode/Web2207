@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>模态框</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			.mask {
+				background:rgba(0, 0, 0, 0.25);
+				position: fixed;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+			}
+			.login {
+				width: 400px;
+				height: 200px;
+				background: white;
+				position: fixed;
+				top: 50%;
+				margin-top: -100px;
+				left: 50%;
+				margin-left: -200px;
+			}
+		</style>
+	</head>
+	<body>
+		<p>这是一个网页...</p>
+		<!-- 遮罩层 -->
+		<div class="mask"></div>
+		<!-- 登录层 -->
+		<div class="login"></div>
+	</body>
+</html>

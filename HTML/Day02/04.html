@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>合并表格</title>
+	</head>
+	<body>
+		<table border="1" width="400px">
+			<caption><strong>小说排行榜</strong></caption>
+			<thead>
+				<tr>
+					<th>编号</th>
+					<th>书名</th>
+					<th>作者</th>
+					<th>阅读量</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>三体</td>
+					<td>刘慈欣</td>
+					<td>9999</td>
+				</tr>
+				<tr>
+					<td rowspan="2">2</td>
+					<td rowspan="2">三体2 三体3</td>
+					<td>刘慈欣</td>
+					<td>8888</td>
+				</tr>
+				<tr>
+					
+					
+					<td colspan="2">刘慈欣</td>
+					
+				</tr>
+			</tbody>
+		</table>		
+		<hr />
+		
+		<table border="1px" width="400px">
+			<tr>
+				<!-- 设置第一列跨行 -->
+				<td rowspan="2">1</td>
+				<td>2</td>
+				<!-- 设置第三行跨列 -->
+				<td colspan="2">3</td>
+
+			</tr>
+			<tr>
+
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+		</table>
+	</body>
+</html>

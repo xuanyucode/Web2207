@@ -1,0 +1,14 @@
+:focus {
+ outline: 1px solid #666;
+}
+input[type="text"] {
+ margin: 0 0 15px;
+ padding: 8px 10px;
+ border: 1px solid #d0d1d3;
+}
+button {
+ padding: 8px 15px;
+ background: #979380;
+ color: #fff;
+ border: none;
+}

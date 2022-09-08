@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>99乘法表</title>
+	</head>
+	<body>
+		<script>
+			// for(var j=1;j<=9;j++){
+				
+			// 	// 内层循环：控制每一行拼接的
+			// 	// 循环条件由所在的行j来控制
+			// 	for(var i=1,str='';i<=j;i++){
+			// 		// 用str自动往后拼接
+			// 		str+=i+'*'+j+'='+(i*j)+' '
+			// 		// 如果是第3行或者第4行，并且是第2列，多拼接一个空格
+			// 		if((j===3 || j===4) && i===2){
+			// 			str+=' '
+			// 		}
+			// 	}
+			// 	// 当一行拼接结束后，打印这一行
+			// 	console.log(str)
+			// }
+			
+			let str = '';
+			for (let i = 1; i <= 9; i++) {
+			  for (let j = 1; j <= i; j++) {
+			    str += i + '×' + j + '=' + (i * j) + '\t';
+			  }
+			  str += '\n';
+			}
+			console.log(str);
+
+		</script>
+	</body>
+</html>

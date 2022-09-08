@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>作用域</title>
+	</head>
+	<body>
+		<script>
+			//在程序执行前，会将var声明的变量提升到所在作用域的最前边，只是提升声明部分，赋值不提升
+			// console.log(a)
+			// var a=1
+			
+			function fn(){
+				// var b
+				console.log(b)
+				var b=3
+				console.log(b)
+			}
+			fn()
+			
+			
+			var m=7
+			function bar(m){
+				//var m=3 局部变量
+				m+=3
+			}
+			bar(5)
+			console.log(m) //全局变量
+			
+			// JS猴子偷桃 每天吃前一天的一半+1个 第十天早上剩一个
+			//递归
+			function peach(n) {
+			    if (n===10){
+			        return 1;
+			    }
+			    return (peach(n + 1) + 1) * 2;
+			}
+			console.log( peach(1) );
+			
+			//循环
+			function peach2() {
+			    //从第10天开始
+			    var day = 10;
+			    //已知第10天剩一个桃子
+			    var left = 1;
+			    //求前一天桃子总量
+				
+			    for (var day = 10; day > 1; day--) {
+			       //通过当天的left，计算前一天的
+			       left = (left + 1) * 2;   
+			    }
+			    return left;
+			}
+			console.log( peach2() );
+		</script>
+	</body>
+</html>

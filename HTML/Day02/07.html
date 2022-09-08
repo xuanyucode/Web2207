@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表单</title>
+	</head>
+	<body>
+		<!-- form标签用于按钮提交
+			 <form action="设置提交的界面></form>"-->
+		<form action="06.html">
+			<!-- input默认就是一个文本输入框 
+			type  设置input标签的类型，默认值text
+			value  设置默认值，不写这个属性也是存在的，用户输入的值都会进入到这个属性中-->
+			文本输入框 <input type="text" value="1">
+			<br><br>
+			密码框 <input type="password" placeholder="请输入密码">
+			<br><br>
+			提交按钮 <input type="submit" value="登录"> <!-- 将收集的数据发送给另一个页面（后端） -->
+			<br><br>
+			重置 <input type="reset"> <!-- 将表单控件中的内容恢复初始状态 -->
+			<br><br>
+			普通按钮 <input type="button" value="普通按钮"> <!-- 点击没有效果，后期用于JS中 -->
+			<br><br>
+			<!-- <input type="checkbox" checked  value="设置发送给后端的值">
+  checked 设置选中状态 -->
+			复选框 <input type="checkbox" value="三体1">三体1
+			<input type="checkbox" checked value="三体2">三体2
+			<input type="checkbox" value="三体3">三体3
+			<br><br>
+			单选框 <input type="radio" name="sex" value="男">男
+			<input type="radio" name="sex" value="女">女
+			<input type="radio" name="sex" value="unkown" checked>unkown
+			<!-- <input type="radio" name="设置组名称" checked  value="设置发送给后端的值">
+   name用于将多个单选框成一组，只能选中其中一个 -->
+			<br><br>
+			<!-- 用于设置要上传的文件
+ <input type=”file” multiple>
+  multiple 允许用户上传多个文件 -->
+			文件域 <input type="file" multiple>
+			<br><br>
+			多行文本域<textarea placeholder="提示信息" cols="30" rows="10">默认</textarea>
+			
+			<br><br>
+			下拉列表<select>
+				<option value="北">北</option>
+				<option value="上" selected>上</option>
+				<option value="广">广</option>
+				<option value="深">深</option>
+			</select>
+		</form>
+	</body>
+</html>

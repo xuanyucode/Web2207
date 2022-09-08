@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			let str='图图playing'
+			console.log(str.length)
+			//字符串调用属性或则方法的时候，会自动包装为对象包装
+			console.log(new String(str).length)
+			
+			let a=[]
+			a.length
+			let b='abc'
+			b.length
+			
+			//charAt(下标) 通过下标获取某个字符 
+			//也可使用数组写法 字符串[下标]
+			let str2='javascript'
+			console.log(str2.charAt(0),str2[0])
+			
+			for(var i=0,count=0;i<str2.length;i++){
+				// console.log(str2.charAt(i),str2[i])
+				if(str2[i]==='a'){
+					count++
+				}
+			}
+			console.log(count)
+			
+			//查找字符串
+			console.log(str2.indexOf('scr'))
+			console.log(str2.indexOf('a'))//第一个
+			console.log(str2.lastIndexOf('a'))//最后一个
+			
+			let email='xuanyu_hu@foxmail.com'
+			if(email.indexOf('@') === -1){
+				alert('非法邮箱')
+			}
+			
+			//英文字符转大小写
+			let str3='JavaScript'
+			console.log(str3.toUpperCase())
+			console.log(str3.toLowerCase())
+			console.log(str3)//所有的字符串API都不会影响到原来的字符串
+			
+			//slice(start,end) start开始下标 end结束下标 不包含end本身 不写end截到最后
+			console.log(str2.slice(4,6))
+			
+			//截取出邮箱中的用户名和域名
+			let n=email.indexOf('@')
+			console.log(`用户名：${email.slice(0,n)}\n域名：${email.slice(n+1)}`)
+			
+			let arr=['a','b','c']
+			//数组转为字符串
+			let str4=arr.join('-')
+			console.log(str4)
+			//字符串转为数组
+			console.log(str4.split('-'))
+			
+			console.log(str3.split('').reverse().join(''))
+			
+			//获取以下文件的后缀名
+			let str5='jing.jpg.gif.png'
+			// //查找最后一个点的下标
+			// let n=str5.lastIndexOf('.')
+			// //截取
+			// console.log(str5.slice(n+1))
+			//将字符串转为数组，用点分隔
+			let arr2=str5.split('.')
+			//最后一个元素下标：长度-1
+			console.log(arr2[arr2.length-1])
+		</script>
+	</body>
+</html>

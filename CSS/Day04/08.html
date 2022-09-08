@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			div {
+				width: 150px;
+				height: 150px;
+				background-color: orange;
+				margin: 50px auto;
+			}
+			.box1 {
+				/* 盒子阴影 */
+				/* 水平  垂直  羽化(模糊)  扩展半径  颜色  内外侧 */
+				/* box-shadow: 10px 10px 15px 10px red inset; */
+				box-shadow: 10px -10px 15px;
+			}
+			.box2 {
+				border-radius: 50%;
+				box-shadow: 0 0 25px rgba(0,0,0,0.8);
+			}
+			input,textarea {
+				/* 去除外轮廓线 */
+				outline: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+		<input type="text">
+		<textarea></textarea>
+		<input type="checkbox">
+	</body>
+</html>

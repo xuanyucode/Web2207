@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>数据渲染</title>
+	</head>
+	<body>
+		<ul id="cont">
+			<!-- <li>让操作更简单 <span>2022-9-2</span></li>
+			<li>让操作不简单 <span>2022-9-3</span></li>
+			<li>让操作很困难 <span>2022-9-4</span></li> -->
+		</ul>
+		<script>
+			//假设已获取一组数据，把数据渲染到ul中间
+			let list=[
+				{title:'新闻标题1',ctime:'2022-9-1'},
+				{title:'新闻标题2',ctime:'2022-9-2'},
+				{title:'新闻标题3',ctime:'2022-9-3'}
+			]
+			let str=''
+			for(let i=0;i<list.length;i++){
+				console.log(list[i].title,list[i].ctime)
+				console.log(`<li>${list[i].title}<span>${list[i].ctime}</span></li>`)
+				str+=`<li>${list[i].title}<span>${list[i].ctime}</span></li>`
+			}
+			cont.innerHTML=str
+		</script>
+	</body>
+</html>

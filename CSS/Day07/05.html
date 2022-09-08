@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>目标伪类选择器</title>
+		<style>
+			div {
+				width: 200px;
+				height: 200px;
+				border: 1px solid black;
+				display: none;
+			}
+			/* 目标伪类选择器
+			 通过a标签，触发div目标选择器*/
+			div:target {
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="#c1">文字1</a>
+		<a href="#c2">文字2</a>
+		<a href="#c3">文字3</a>
+		<div id="c1">内容1</div>
+		<div id="c2">内容2</div>
+		<div id="c3">内容3</div>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>外部样式</title>
+		<link rel="stylesheet" href="04.css"/>
+		<style>
+			h2{
+				color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 style="color: green;">woshitutu</h1>
+		<h2>wobushitutu</h2>
+	</body>
+</html>
+<!-- !important > 行内样式 >(内部样式=外部样式)>浏览器默认样式
+	 color: blue!important;
+	 注意：尽量不要使用important，级别过高，将来无法进行覆盖。 -->
+<!-- 行内样式：会和HTML混杂写在一起，不好修改；一般用于JS中动态变化样式
+	 内部样式：可以减少服务器请求次数，加快网站的打开速度；大型网站（百度首页，京东首页…）选择这种方法
+	 外部样式：结构上显得简洁规范，便于后期维护。会请求多次，影响网站的打开速度。后期还可以实现代码的复用 -->

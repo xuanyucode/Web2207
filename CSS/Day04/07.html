@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			div {
+				width: 150px;
+				height: 150px;
+				background-color: pink;
+				margin: 50px;
+			}
+			.box1 {
+				/* 边框圆角 */
+				border-radius: 10px;
+			}
+			.box2 {
+				/* 只设置其中一个角 
+				先写垂直再写水平
+				*/
+				border-top-left-radius: 20px;
+			}
+			.box3 {
+				/* 左上/右下   右上/左下 */
+				/* border-radius: 10px 75px; */
+				/* border-radius: 10px 20px 40px; */
+				/* 正圆 */
+				border-radius: 50%;
+			}
+			.box4 {
+				width: 300px;
+				border-radius: 50%;
+			}
+			.box5 {
+				height: 40px;
+				/* 胶囊型：为高度的一半 */
+				border-radius: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+		<div class="box4"></div>
+		<div class="box5"></div>
+	</body>
+</html>

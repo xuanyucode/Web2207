@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.box1{
+				
+			}
+			/* 后代选择器:选中某个标签的子孙后代
+						.box  span{  }   选择box类下表所有的后代span
+						注意事项：空格就是后代选择器*/
+			/* .box1 span */
+			.box1 p span{
+				color: red;
+			}
+			
+			.list1 a:hover{
+				color: red;
+			}
+			
+			.box2{
+				
+			}
+			/* 直接子代选择器:在标签中直接找儿子 */
+			.box2>h1>span{
+				color: blue;
+				background-color: lightblue;
+			}
+			
+			/* 兄弟选择器:往后找兄弟标签 */
+			h1~p{
+				color: red;
+			}
+			
+			/* 紧邻兄弟选择器：往后找一个兄弟 
+			注意：紧邻选择器后边不能有其他的标签*/
+			h4+p{
+				background-color: orange;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">
+			<span>这是span标签</span>
+			<p>这是一个段落，<span>这是span标签</span></p>
+			<h1>标题一 <span>这也是span</span></h1>
+		</div>
+		
+		<ul class="list1">
+			<li><a href="#">链接</a></li>
+			<li><a href="#1">链接</a></li>
+			<li><a href="#2">链接</a></li>
+		</ul>
+		
+		<div class="box2">
+			<span>这是span标签</span>
+			<p>这是一个段落，<span>这是span标签</span></p>
+			<h1>标题一 <span>这也是span</span></h1>
+		</div>
+		
+		<div>
+			<p>段落1</p>
+			<p>段落2</p>
+			<h1>标题1</h1>
+			<p>段落3</p>
+			<p>段落4</p>
+			<h2>标题2</h2>
+			<p>段落5</p>
+			<p>段落6</p>
+			<h3>标题3</h3>
+		</div>
+		
+		<div>
+			<h4>标题4</h4>
+			<p>段落</p>
+			<p>段落</p>
+			<p>段落</p>
+		</div>
+	</body>
+</html>

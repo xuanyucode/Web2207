@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		第一个数字<input type="text" id="num1"><br>
+		第二个数字<input type="text" id="num2"><br>
+		<button id="btn">相加</button>
+		两个数字相加：<span id="cont"></span>
+		<script>
+			btn.onclick=function(){
+			console.log(num1.value)
+			console.log(num2.value)
+			var num = Number(num1.value) + Number(num2.value) 
+			// alert(num)
+			
+			cont.innerHTML=num
+			}
+			
+		</script>
+	</body>
+</html>

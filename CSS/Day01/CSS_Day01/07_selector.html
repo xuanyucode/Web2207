@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		/* 群组选择器:多个选择器之间用逗号隔开 */
+		h1,h2,.a1,#a4{
+			color: red;
+		}
+		/* 伪类选择器 */
+		/* 鼠标悬停在标签上方 */
+		a:hover{
+			color: red;
+			background-color: pink;
+		}
+		
+		/* 标签被激活状态(鼠标按下不松开) */
+		a:active{
+			color: blue;
+		}
+		.d1:hover{
+			color: aqua;
+			background-color: black;
+		}
+		.d1:active{
+			color: chartreuse;
+		}
+		
+		/* a:link{}   链接未访问状态 */
+		a:link{
+			color: gold;
+		}
+		
+		/* a:visited{}   链接已访问状态 */
+		a:visited{
+			color: firebrick;
+		}
+		
+		/* 获取文本框的输入焦点 */
+		input:focus{
+			color: red;
+			background-color: lightblue;
+		}
+		
+		/* 如果链接中同时出现了4种状态
+		:link > :visited > :hover > :active */
+		</style>
+	</head>
+	<body>
+	<!-- 	
+		<h1>这是标题1</h1>
+		<h2>这是标题2</h2>
+		<h3 class="a1">这是标题3</h3>
+		<h4 id="a4">这是标题4</h4>
+		 -->
+		 <a href="#1">链接1</a>
+		 <a href="#" class="d1">链接2</a>
+		 <a href="#">链接3</a>
+		 <input type="text">
+	</body>
+</html>

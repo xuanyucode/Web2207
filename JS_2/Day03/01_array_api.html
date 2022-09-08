@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>数组API</title>
+	</head>
+	<body>
+		<script>
+			let arr=['a','b','c']
+			//数组转为字符串
+			console.log(arr.toString()) //a,b,c
+			//指定分隔符号
+			console.log(arr.join(''))
+			
+			let arr1=['图图1','图图2','图图3']
+			let arr2=['图图4','图图5','图图6']
+			let arr3=['图图7','图图8','图图9']
+			//拼接多个数组
+			console.log(arr1.concat(arr2,arr3))
+			
+			let arr4=['图图0','图图1','图图2','图图3','图图4','图图5','图图6','图图7','图图8']
+			//截取数组元素
+			console.log(arr4.slice(2,5))
+			console.log(arr4.slice(2))
+			console.log(arr4.slice(-4,-2))
+			/*删除数组元素splice(start,count,v1,v2,...)
+			start开始下标 count删除的数量 cout为空会删到最后
+			v1,v2表示要补充的元素，返回删除的元素，原数组会发生变化*/
+			// console.log(arr4.splice(2))
+			// console.log(arr4.splice(2,2))
+			console.log(arr4.splice(-3,0,'秀晶','秀晶'))
+			console.log(arr4)
+			//翻转数组元素
+			console.log(arr4.reverse())
+			console.log(arr4)
+			//数组排序
+			let arr5=[23,9,78,6,45]
+			//默认按照首字符编码排序
+			console.log(arr5.sort())
+			arr5.sort(function(a,b){
+				return a-b
+				// return b-a
+			})
+			console.log(arr5)
+			
+			arr5.push('1')//末尾添加
+			console.log(arr5)
+			arr5.pop()//删除末尾一个元素
+			console.log(arr5)
+			arr5.unshift('1')//开头添加
+			console.log(arr5)
+			arr5.shift()//开头删除一个元素
+			console.log(arr5)
+		</script>
+	</body>
+</html>

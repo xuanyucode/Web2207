@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>内边距</title>
+		<style>
+			.s1{
+				background-color: pink;
+				/* 行内元素的水平方向的内边距正常生效；垂直方向会产生“视觉生效”，实际上没有生效。 */
+				padding: 20px 10px;
+			}
+			b{
+				display: inline-block;
+				background-color: lightblue;
+				padding: 20px 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- &nbsp;   在网页中产生空格
+			 &lt;    <
+			 &gt;   >
+			 &copy;  产生版权分号© -->
+		&lt;&nbsp;&nbsp;tutu&nbsp;&nbsp;&gt;
+		&copy;
+		<br>
+		<span>图图图图图图</span>
+		<span class="s1">图图图图图图</span>
+		<span>图图图图图图</span>
+		<b>加粗标签</b>
+		<span>图图图图图图</span>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sed, dicta eos maiores hic, molestiae maxime nemo nesciunt, quis praesentium sit ducimus? Esse ex alias sapiente laboriosam commodi est voluptas!</p>
+	</body>
+</html>

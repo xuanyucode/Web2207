@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.box {
+				width: 400px;
+				/* height: 250px; */
+				border: 2px solid red;
+			}
+			
+			/* 浮动产生的结果：
+			 Ⅰ、高度塌陷——如果子盒子都浮动起来，父盒子不能再被撑开
+			 Ⅱ、浮动盒子如果不设置宽度，宽度就是内容的宽度*/
+			.box1 {
+				/* width: 150px; */
+				height: 250px;
+				background-color: pink;
+				float: left;
+			}
+			.box2 {
+				width: 200px;
+				height: 250px;
+				background-color: orange;
+				float: right;
+			}
+			
+			/* Ⅲ、float可以让行内元素块状化，具有了宽高属性 */
+			.box span {
+				background-color: lightgreen;
+				float: left;
+				width: 100px;
+				height: 250px;
+			}
+			
+			/* 四、float可以去除图片空白边距 */
+			.box img {
+				float: right;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box1">盒子1</div>
+			<span>这是行内元素</span>
+			<div class="box2">盒子2</div>
+			<img src="img/秀晶mini.jpg" alt="">
+			<img src="img/秀晶mini.jpg" alt="">
+			<img src="img/秀晶mini.jpg" alt="">
+			<img src="img/秀晶mini.jpg" alt="">
+			<img src="img/秀晶mini.jpg" alt="">
+			<img src="img/秀晶mini.jpg" alt="">
+			<img src="img/秀晶mini.jpg" alt="">
+			<img src="img/秀晶mini.jpg" alt="">
+		</div>
+	</body>
+</html>
